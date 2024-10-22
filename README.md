@@ -6,7 +6,7 @@ This repository contains the toolkit of data processing and MATLAB scripts to re
 
 This guide covers the steps for processing the DR(eye)VE open-source dataset, including code and workflow. Please note that the BIT dataset is a reference dataset shared by BIT and is temporarily not available. Therefore, this part focuses on the processing methods for the DR(eye)VE dataset. The data processing steps for BIT are not within the scope of this guide. This part is dedicated to simple data integration and processing.
 
-Our goal is to convert the DR(eye)VE dataset into MAT format for further analysis and research. Below is an overview of the entire processing workflow, including the required environment setup and detailed instructions for each processing step. The relevant files are in the [`OpenCode_Eye&Behavior_HKUST-GZ`] folder.
+Our goal is to convert the DR(eye)VE dataset into MAT format for further analysis and research. Below is an overview of the entire processing workflow, including the required environment setup and detailed instructions for each processing step. The relevant files are in the [`OpenCode_Eye&Behavior`] folder.
 
 ## 0. Environment Configuration
 
@@ -94,7 +94,7 @@ This guide provides a comprehensive overview of the steps involved in processing
 Description of data structure fields in the generated .mat file:
 - trialnum: trial number 
 - fixdur: fixation duration [s] per each item fixation
-- fixitem: fixated item (item1-RV or item2-RV)
+- fixitem: fixated item (item1-RV or item2-FV)
 - itemval: perceptual states value associated with each item 
 - choice: decision at end of trial (1-Lane Changing or 2-Lane Keeping)
 - rt: response time [s]
@@ -102,16 +102,15 @@ Description of data structure fields in the generated .mat file:
 
 ## Installation
 
-To execute the Matlab scripts, you need to download and extract them into a folder of your preference, and then navigate to this folder using MATLAB. The relevant files are in the [`FigurePlot_HKUST-GZ`] folder.
+To execute the Matlab scripts, you need to download and extract them into a folder of your preference, and then navigate to this folder using MATLAB. The relevant files are in the [`FigurePlot`] folder.
 
 The [`data`] folder contains the human driving behavioural data.
 The [`functions`] folder contains all the custom MATLAB functions utilized in the main scripts. This directory will be included at the start of each script.
 
-All scripts have been tested and run under MATLAB R2023a on a Windows10 system. There are four scripts responsible for generating Figure2-5 in the results section of the article, and FigureA2 in the extended section. These four scripts are designed to utilize the functions provided within this package to generate all the figures. By simply setting the rootdir variable, which is declared at the beginning of each script, to the directory containing the scripts, they should execute correctly.
-1. [`Lanechange2023_rdv.m`]
-2. [`Lanechange2023_times.m`]
-3. [`Lanechange2023_behaviour.m`]
-4. [`Lanechange2023_extended.m`]
+All scripts have been tested and run under MATLAB R2023a on a Windows10 system. There are four scripts responsible for generating Figure2-6 in the results section of the article, and figures in the Supplementary Section. These four scripts are designed to utilize the functions provided within this package to generate all the figures. By simply setting the rootdir variable, which is declared at the beginning of each script, to the directory containing the scripts, they should execute correctly.
+1. [`AS2024_psychometricAnalysis.m`]
+2. [`AS2024_rdv.m`]
+3. [`AS2024_switchProbability.m`]
 
 # License
 
